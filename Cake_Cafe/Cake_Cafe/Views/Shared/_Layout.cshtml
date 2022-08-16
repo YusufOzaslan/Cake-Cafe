@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="~/css/bootstrap.css" type="text/css" media="screen">
     <link rel="stylesheet" href="~/css/bootstrap-responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/css/isotope.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="~/css/camera.css" type="text/css" media="screen">
     <link rel="stylesheet" href="~/css/style.css" type="text/css" media="screen">
 
     <script type="text/javascript" src="~/js/jquery.js"></script>
@@ -19,33 +22,54 @@
 
     <script type="text/javascript" src="~/js/jquery.ui.totop.js"></script>
 
+    <script type="text/javascript" src="~/js/camera.js"></script>
+    <script type="text/javascript" src="~/js/jquery.mobile.customized.min.js"></script>
+
     <script type="text/javascript" src="~/js/jquery.caroufredsel.js"></script>
     <script type="text/javascript" src="~/js/jquery.touchSwipe.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            // carufredsel testimonials
-            $('#caroufredsel').carouFredSel({
+            // camera
+            $('#camera_wrap').camera({
+                //thumbnails: true
+                autoAdvance: true,
+                mobileAutoAdvance: true,
+                //fx					: 'simpleFade',
+                height: '51%',
+                hover: false,
+                loader: 'none',
+                navigation: true,
+                navigationHover: true,
+                mobileNavHover: true,
+                playPause: false,
+                pauseOnClick: false,
+                pagination: false,
+                time: 7000,
+                transPeriod: 1000,
+                minHeight: '200px'
+            });
+
+            //	carouFredSel
+            $('#slider3 .carousel.main ul').carouFredSel({
                 auto: {
-                    timeoutDuration: 9000
+                    timeoutDuration: 8000
                 },
                 responsive: true,
-                direction: "left",
-                prev: '.prev_testimonial',
-                next: '.next_testimonial',
+                prev: '.prev3',
+                next: '.next3',
                 width: '100%',
                 scroll: {
                     items: 1,
                     duration: 1000,
-                    easing: "easeOutExpo",
-                    fx: "fade"
+                    easing: "easeOutExpo"
                 },
                 items: {
-                    width: '1000',
+                    width: '320',
                     height: 'variable', //	optionally resize item-height
                     visible: {
                         min: 1,
-                        max: 1
+                        max: 4
                     }
                 },
                 mousewheel: false,
@@ -54,12 +78,21 @@
                     onTouch: true
                 }
             });
+            $(window).bind("resize", updateSizes_vat).bind("load", updateSizes_vat);
+
+            function updateSizes_vat() {
+                $('#slider3 .carousel.main ul').trigger("updateSizes");
+            }
+            updateSizes_vat();
+
         });
-        $(window).load(function () { });
+        $(window).load(function () {
+
+        });
     </script>
 </head>
 
-<body class="subpage">
+<body class="main">
     <div id="main">
 
         <div class="top1">
@@ -75,7 +108,9 @@
                             <div class="top2 clearfix">
                                 <div class="social_wrapper">
                                     <ul class="social clearfix">
-                                        <partial name="_LoginPartial" />
+                                        <li>
+                                            <partial name="_LoginPartial" />
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,57 +119,13 @@
                 </div>
             </div>
         </div>
-
-        <div class="hl1"></div>
-        <div class="hl2">
-            <div class="hl2_inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <div class="hl1_inner2">
-                                <div class="navbar navbar_">
-                                    <div class="navbar-inner navbar-inner_">
-                                        <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </a>
-                                        <div class="nav-collapse nav-collapse_ collapse">
-                                            <ul class="nav sf-menu clearfix">
-                                                <li><a href="index.html">home</a></li>
-                                                <li class="active sub-menu sub-menu-1">
-                                                    <a href="index-1.html">about</a>
-                                                    <ul>
-                                                        <li><a href="index-1.html">who we are</a></li>
-                                                        <li><a href="index-1.html">our staff</a></li>
-                                                        <li><a href="index-1.html">history</a></li>
-                                                        <li><a href="index-1.html">Products</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="index-2.html">our cakes</a></li>
-                                                <li><a href="index-3.html">services</a></li>
-                                                <li><a href="index-4.html">MENU</a></li>
-                                                <li><a href="index-5.html">contacts</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="page_title">
-                                    <div class="page_title_left"></div>
-                                    <div class="page_title_px">Who We Are</div>
-                                    <div class="page_title_right"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
+        
         <div class="hl3"></div>
-        >
-
-        @RenderBody()
-
         <div class="container">
             <div class="row">
                 <div class="span12">
