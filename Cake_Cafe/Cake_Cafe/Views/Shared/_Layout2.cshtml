@@ -143,9 +143,12 @@
                                         </a>
                                         <div class="nav-collapse nav-collapse_ collapse">
                                             <ul class="nav sf-menu clearfix">
-                                                <li class="active"><a href="index.html">home</a></li>
+                                                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                                <li><a asp-area="" asp-controller="Cake" asp-action="Index">OUR CAKES</a></li>
+                                                <li><a asp-area="" asp-controller="Services" asp-action="Index">SERVICES</a></li>
+                                                <li><a asp-area="" asp-controller="Menu" asp-action="Index">MENU</a></li>
                                                 <li class="sub-menu sub-menu-1">
-                                                    <a href="index-1.html">about</a>
+                                                    <a>Admin</a>
                                                     <ul>
                                                         <li><a href="index-1.html">who we are</a></li>
                                                         <li><a href="index-1.html">our staff</a></li>
@@ -153,10 +156,6 @@
                                                         <li><a href="index-1.html">Products</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="index-2.html">our cakes</a></li>
-                                                <li><a href="index-3.html">services</a></li>
-                                                <li><a href="index-4.html">MENU</a></li>
-                                                <li><a href="index-5.html">contacts</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -300,12 +299,10 @@
                         <div class="bot1_inner">
                             <div class="menu_bot">
                                 <ul id="menu_bot" class="clearfix">
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="index-1.html">about</a></li>
-                                    <li><a href="index-2.html">our cakes</a></li>
-                                    <li><a href="index-3.html">services</a></li>
-                                    <li><a href="index-4.html">MENU</a></li>
-                                    <li><a href="index-5.html">contacts</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-area="" asp-controller="Cake" asp-action="Index">OUR CAKES</a></li>
+                                    <li><a asp-area="" asp-controller="Services" asp-action="Index">SERVICES</a></li>
+                                    <li><a asp-area="" asp-controller="Menu" asp-action="Index">MENU</a></li>
                                 </ul>
                             </div>
                         </div>

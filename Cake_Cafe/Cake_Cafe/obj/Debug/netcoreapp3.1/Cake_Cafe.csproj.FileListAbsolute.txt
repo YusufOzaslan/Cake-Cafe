@@ -173,3 +173,6 @@ C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcorea
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Cake\Index.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Services\Index.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Menu\Index.cshtml.g.cs
