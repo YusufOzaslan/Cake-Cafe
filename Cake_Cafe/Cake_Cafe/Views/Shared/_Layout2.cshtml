@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -147,15 +151,18 @@
                                                 <li><a asp-area="" asp-controller="Cake" asp-action="Index">OUR CAKES</a></li>
                                                 <li><a asp-area="" asp-controller="Services" asp-action="Index">SERVICES</a></li>
                                                 <li><a asp-area="" asp-controller="Menu" asp-action="Index">MENU</a></li>
-                                                <li class="sub-menu sub-menu-1">
-                                                    <a>Admin</a>
-                                                    <ul>
-                                                        <li><a href="index-1.html">who we are</a></li>
-                                                        <li><a href="index-1.html">our staff</a></li>
-                                                        <li><a href="index-1.html">history</a></li>
-                                                        <li><a href="index-1.html">Products</a></li>
-                                                    </ul>
-                                                </li>
+                                                @if (SignInManager.IsSignedIn(User))
+                                                {
+                                                    <li class="sub-menu sub-menu-1">
+                                                        <a>Admin</a>
+                                                        <ul>
+                                                            <li><a href="index-1.html">who we are</a></li>
+                                                            <li><a href="index-1.html">our staff</a></li>
+                                                            <li><a href="index-1.html">history</a></li>
+                                                            <li><a href="index-1.html">Products</a></li>
+                                                        </ul>
+                                                    </li>
+                                                }
                                             </ul>
                                         </div>
                                     </div>
