@@ -14,6 +14,10 @@ namespace Cake_Cafe.Models
 
         public string Photo { get; set; }
 
+        public double Price { get; set; }
+
+        public string Description { get; set; }
+
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")] public Category Category { get; set; }
     }

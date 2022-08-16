@@ -181,6 +181,11 @@ C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcorea
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Category\Details.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\SliderPhotos\Create.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\SliderPhotos\Delete.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\SliderPhotos\Details.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\SliderPhotos\Edit.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\SliderPhotos\Index.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs

@@ -1,4 +1,5 @@
-﻿using Cake_Cafe.Models;
+﻿using Cake_Cafe.Data;
+using Cake_Cafe.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,19 @@ namespace Cake_Cafe.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var db = _context.SliderPhotos;
+
+            return View(db.ToList());
         }
 
         public IActionResult Privacy()
