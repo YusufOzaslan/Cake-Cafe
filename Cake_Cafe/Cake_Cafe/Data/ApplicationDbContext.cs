@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Cake_Cafe.Models;
 
 namespace Cake_Cafe.Data
 {
@@ -12,5 +13,9 @@ namespace Cake_Cafe.Data
             : base(options)
         {
         }
+
+        public DbSet<Category> Category { get; set; }
+
+        public DbSet<Product> Product { get; set; }
     }
 }
