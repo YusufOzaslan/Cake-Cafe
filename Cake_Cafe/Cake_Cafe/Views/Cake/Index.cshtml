@@ -1,4 +1,8 @@
-﻿<script>
+﻿@model IEnumerable<Cake_Cafe.Models.Product>
+
+
+
+<script>
     $(document).ready(function () {
         //
 
@@ -49,175 +53,24 @@
                     <h1>Our Cakes</h1>
 
                     <ul class="thumbnails thumbnails-iisotope" id="isotope-items">
-                        <li class="isotope-element isotope-filter1">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
+                        @foreach (var item in Model)
+                        {
+                            <li class="isotope-element isotope-filter1">
+                                <div class="thumb-isotope">
+                                    <div class="thumbnail clearfix">
+                                        <a href="@item.Photo">
+                                            <figure>
+                                                <img src="@item.Photo" alt=""><em></em>
+                                            </figure>
+                                            <div class="caption">
+                                                @item.ProductName <br/>
+                                                Fiyat: @item.Price ₺
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter2">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/1246x854">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter3">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/546x850">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter1">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter2">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter3">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter1">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter2">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter3">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter1">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter2">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="isotope-element isotope-filter3">
-                            <div class="thumb-isotope">
-                                <div class="thumbnail clearfix">
-                                    <a href="https://via.placeholder.com/946x724">
-                                        <figure>
-                                            <img src="https://via.placeholder.com/253x207" alt=""><em></em>
-                                        </figure>
-                                        <div class="caption">
-                                            Lorem Ipsum
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
