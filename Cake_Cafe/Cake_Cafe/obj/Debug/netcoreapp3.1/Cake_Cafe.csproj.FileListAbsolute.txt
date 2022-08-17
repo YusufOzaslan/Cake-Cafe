@@ -191,3 +191,8 @@ C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcorea
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\BestProducts\Create.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\BestProducts\Delete.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\BestProducts\Details.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\BestProducts\Edit.cshtml.g.cs
+C:\Users\YUSUF\Documents\GitHub\Cake-Cafe\Cake_Cafe\Cake_Cafe\obj\Debug\netcoreapp3.1\Razor\Views\BestProducts\Index.cshtml.g.cs

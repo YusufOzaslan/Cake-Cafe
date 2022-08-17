@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Cake_Cafe.Data;
 using Cake_Cafe.Models;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace Cake_Cafe.Controllers
 {
@@ -14,9 +16,12 @@ namespace Cake_Cafe.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public ProductController(ApplicationDbContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+
+        public ProductController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Product
@@ -61,6 +66,23 @@ namespace Cake_Cafe.Controllers
         {
             if (ModelState.IsValid)
             {
+
+
+                string webRootPath = _hostEnvironment.WebRootPath;
+
+                var files = HttpContext.Request.Form.Files;
+
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(webRootPath, @"images\Products");
+                var extension = Path.GetExtension(files[0].FileName);
+
+                using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Append))
+                {
+                    files[0].CopyTo(fileStream);
+                }
+
+                product.Photo = @"\images\Products\" + fileName + extension;
+
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -82,6 +104,7 @@ namespace Cake_Cafe.Controllers
             {
                 return NotFound();
             }
+
             ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "CategoryName", product.CategoryId);
             return View(product);
         }
@@ -102,6 +125,22 @@ namespace Cake_Cafe.Controllers
             {
                 try
                 {
+
+                    string webRootPath = _hostEnvironment.WebRootPath;
+
+                    var files = HttpContext.Request.Form.Files;
+
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(webRootPath, @"images\Products");
+                    var extension = Path.GetExtension(files[0].FileName);
+
+                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Append))
+                    {
+                        files[0].CopyTo(fileStream);
+                    }
+
+                    product.Photo = @"\images\Products\" + fileName + extension;
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }

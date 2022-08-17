@@ -19,5 +19,7 @@ namespace Cake_Cafe.Data
         public DbSet<Product> Product { get; set; }
 
         public DbSet<SliderPhotos> SliderPhotos { get; set; }
+
+        public DbSet<BestProducts> BestProducts { get; set; }
     }
 }

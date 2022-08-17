@@ -117,6 +117,21 @@ namespace Cake_Cafe.Controllers
             {
                 try
                 {
+                    string webRootPath = _hostEnvironment.WebRootPath;
+
+                    var files = HttpContext.Request.Form.Files;
+
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(webRootPath, @"images\Slide");
+                    var extension = Path.GetExtension(files[0].FileName);
+
+                    using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Append))
+                    {
+                        files[0].CopyTo(fileStream);
+                    }
+
+                    sliderPhotos.Photo = @"\images\Slide\" + fileName + extension;
+
                     _context.Update(sliderPhotos);
                     await _context.SaveChangesAsync();
                 }

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cake_Cafe.Controllers
 {
@@ -24,8 +25,10 @@ namespace Cake_Cafe.Controllers
         public IActionResult Index()
         {
             var db = _context.SliderPhotos;
+            var dbBestProducts = _context.BestProducts.Include(p=> p.Product);
+            var model = new ProductDTO { SliderPhotosEnumerable = db, BestProductsEnumerable = dbBestProducts };
 
-            return View(db.ToList());
+            return View(model);
         }
 
         public IActionResult Privacy()
@@ -38,5 +41,11 @@ namespace Cake_Cafe.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+    }
+
+    public class ProductDTO // Data Transfer Object
+    {
+        public IEnumerable<SliderPhotos> SliderPhotosEnumerable { get; set; }
+        public IEnumerable<BestProducts> BestProductsEnumerable { get; set; }
     }
 }

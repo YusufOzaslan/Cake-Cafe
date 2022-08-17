@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout2";
 }
-@model IEnumerable<Cake_Cafe.Models.SliderPhotos>
+@model Cake_Cafe.Controllers.ProductDTO
 
 
 
@@ -53,6 +53,7 @@
                                                     <li><a asp-area="" asp-controller="Product" asp-action="Index">Product Setting</a></li>
                                                     <li><a asp-area="" asp-controller="Category" asp-action="Index">Category Setting</a></li>
                                                     <li><a asp-area="" asp-controller="SliderPhotos" asp-action="Index">Slide Setting</a></li>
+                                                    <li><a asp-area="" asp-controller="BestProducts" asp-action="Index">Best Products Setting</a></li>
                                                 </ul>
                                             </li>
                                         }
@@ -63,7 +64,7 @@
                         <div id="slider_wrapper">
                             <div id="slider" class="clearfix">
                                 <div id="camera_wrap">
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.SliderPhotosEnumerable)
                                     {
                                         <div data-src="@item.Photo">
                                             <div class="camera_caption fadeIn">
@@ -88,76 +89,24 @@
                                 <div class="inner span12">
                                     <div class="carousel main">
                                         <ul>
-                                            <li>
-                                                <div class="thumb-carousel banner1">
-                                                    <div class="thumbnail clearfix">
-                                                        <a href="#">
-                                                            <figure>
-                                                                <img src="https://via.placeholder.com/277x277" alt="">
-                                                            </figure>
-                                                            <div class="caption">
-                                                                Macaroons
-                                                            </div>
-                                                        </a>
+                                            @foreach (var item in Model.BestProductsEnumerable)
+                                            {
+                                                <li>
+                                                    <div class="thumb-carousel banner1">
+                                                        <div class="thumbnail clearfix">
+                                                            <a href="#">
+
+                                                                <figure>
+                                                                    <img src="@item.Product.Photo" alt="">
+                                                                </figure>
+                                                                <div class="caption">
+                                                                    @item.Product.ProductName
+                                                                </div>
+                                                            </a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="thumb-carousel banner1">
-                                                    <div class="thumbnail clearfix">
-                                                        <a href="#">
-                                                            <figure>
-                                                                <img src="https://via.placeholder.com/277x277" alt="">
-                                                            </figure>
-                                                            <div class="caption">
-                                                                Tiramisu
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="thumb-carousel banner1">
-                                                    <div class="thumbnail clearfix">
-                                                        <a href="#">
-                                                            <figure>
-                                                                <img src="https://via.placeholder.com/277x277" alt="">
-                                                            </figure>
-                                                            <div class="caption">
-                                                                Apricot Tart
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="thumb-carousel banner1">
-                                                    <div class="thumbnail clearfix">
-                                                        <a href="#">
-                                                            <figure>
-                                                                <img src="https://via.placeholder.com/277x277" alt="">
-                                                            </figure>
-                                                            <div class="caption">
-                                                                Croissants
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="thumb-carousel banner1">
-                                                    <div class="thumbnail clearfix">
-                                                        <a href="#">
-                                                            <figure>
-                                                                <img src="https://via.placeholder.com/277x277" alt="">
-                                                            </figure>
-                                                            <div class="caption">
-                                                                Nougatine Tarts
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                </li>
+                                            }
                                         </ul>
                                     </div>
                                 </div>
