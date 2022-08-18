@@ -31,7 +31,7 @@
 
     <script type="text/javascript" src="~/js/jquery.caroufredsel.js"></script>
     <script type="text/javascript" src="~/js/jquery.touchSwipe.min.js"></script>
-    
+
 
     <script>
         $(document).ready(function () {
@@ -111,7 +111,23 @@
                                 </div>
                             </header>
                             <div class="top2 clearfix">
-                                <partial name="_LoginPartial" />
+                                <div class="social_wrapper">
+                                    <div class="navbar navbar_">
+                                        <div class="navbar-inner navbar-inner_">
+                                            <div class="nav-collapse nav-collapse_ collapse">
+                                                <ul class="nav sf-menu clearfix">
+                                                    <li class="sub-menu sub-menu-1">
+                                                        <a style="color:darksalmon">Language</a>
+                                                        <ul>
+                                                            <li><a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="nav-link">English</a></li>
+                                                            <li><a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="nav-link">Türkçe</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,12 +136,12 @@
         </div>
 
         <div class="hl1"></div>
-        
+
 
         @RenderBody()
-    <div class="hl3"></div>
+        <div class="hl3"></div>
 
-        
+
         <div class="container">
             <div class="row">
                 <div class="span12">

@@ -304,6 +304,14 @@
         "runtime": {
           "Cake_Cafe.dll": {}
         },
+        "resources": {
+          "en-US/Cake_Cafe.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/Cake_Cafe.resources.dll": {
+            "locale": "tr-TR"
+          }
+        },
         "compile": {
           "Cake_Cafe.dll": {}
         }
